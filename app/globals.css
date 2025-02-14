@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #800020;
+  --primary-light: #a30028;
+  --secondary: #4a4a4a;
+  --accent: #e7cfd3;
+  --background: #fafaed;
+  --text: #333333;
+  --muted: #666666;
+  --card: #ffffff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--primary);
+}
+
+@layer base {
+  :root {
+    --background: 60 33% 98%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 345 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 29%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 349 31% 86%;
+    --accent-foreground: 345 100% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 349 31% 86%;
+    --input: 349 31% 86%;
+    --ring: 345 100% 25%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 20%;
+    --foreground: 60 33% 98%;
+    --card: 0 0% 20%;
+    --card-foreground: 60 33% 98%;
+    --popover: 0 0% 20%;
+    --popover-foreground: 60 33% 98%;
+    --primary: 345 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 29%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 96%;
+    --accent: 349 31% 86%;
+    --accent-foreground: 345 100% 25%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 349 31% 86%;
+    --input: 349 31% 86%;
+    --ring: 345 100% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.hover\:bg-primary-light:hover {
+  background-color: var(--primary-light);
+}
+
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
